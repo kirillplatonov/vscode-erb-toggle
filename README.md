@@ -1,65 +1,42 @@
-# erb-toggle README
+# VSCode ERB Toggle
 
-This is the README for your extension "erb-toggle". After writing up a brief description, we recommend including the following sections.
+This extensions provides toggle command for ERB tags in VSCode.
+
+Command:
+```
+erb-toggle.toggleTags
+```
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Cycles through tags `<%= %>`, `<% %>` and `<%= %>`
+- Multiline support
+- Works in `erb`, `html.erb`, `js.erb`, `css.erb`, `scss.erb`
 
-For example if there is an image subfolder under your extension project workspace:
+## Demo
 
-\!\[feature X\]\(images/feature-x.png\)
+![VSCode ERB Toggle](images/demo.gif?raw=true)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Keyboard shortcuts
 
-## Requirements
+MacOS: `Command+Shift+.`
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Windows & Linux: `Ctrl+Shift+.`
 
-## Extension Settings
+To customize keyboard shortcuts:
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```
+{
+  "command": "erb-toggle.toggleTags",
+  "key": "ctrl+shift+.",
+  "when": "editorTextFocus && editorLangId =~ /erb/"
+},
+```
 
-For example:
+## Credits
 
-This extension contributes the following settings:
+Inspired by [@vortizhe](https://github.com/vortizhe) plugin [vscode-ruby-erb](https://github.com/vortizhe/vscode-ruby-erb).
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+## License
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is [licensed under the MIT License](LICENSE.txt).
